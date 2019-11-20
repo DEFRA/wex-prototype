@@ -1,0 +1,274 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Waste Exemptions Renewals Prototype
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Waste exemptions prototype
+      </h1>
+      <p class="govuk-body-l">This is not the live service, the live service is <a href="https://wasteexemptions.service.gov.uk/">register your waste exemptions</a>. There is also <a href="https://www.gov.uk/guidance/register-your-waste-exemptions-environmental-permits">guidance on how to register</a>, which is currently considered the service start page.</p>
+      <p class="govuk-body">This prototype is for testing new approaches to delivering the online part of the service, it contains the complete user journey as per the live service, as well as specific deviations where we are trying out a new approach. Details on how to access all of this can be found in the handy table below.</p>
+
+
+{% import "includes/macros.html" as macros %}
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+<!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        Current research
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Address re-use", "/registration-v1/start" ) }}
+      </ul>
+
+      <p class="govuk-body">
+        <a href="/prototype-admin/clear-data">Clear stored data</a>
+      </p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        WEX new registrations
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Registration journey (happy path, company)", "/registration-v1/start" ) }}
+        {{ macros.list( "Pre-load check your answers (for later use)", "/registration-v1/sample" ) }}
+      </ul>
+
+
+
+      <p><a href="change-log">Change log - not current</a></p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        Release candidate
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Renew journey - company", "/registration-rc/sample-company" ) }}
+        {{ macros.list( "Renew journey - individual", "/registration-rc/sample-individual" ) }}
+        {{ macros.list( "Renew journey - partnership", "/registration-rc/sample-partnership" ) }}
+      </ul>
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        WEX renewal from web v1 - WEX number
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Letter", "/public/images/wex-renewal-letter-sample.pdf" ) }}
+        {{ macros.list( "GOV.UK page", "/startpage/startbutton-v2" ) }}
+        {{ macros.list( "Renew from web", "/renew-web-1/start" ) }}
+      </ul>
+    <p>
+      WEX223456 not due yet<br>
+      WEX323456 not recognised<br>
+      WEX423456 expired<br>
+      Anything not WEX123456 pattern wrong format<br>
+
+      Sample company: WEX339257<br>
+      Sample individual: WEX354267<br>
+      Sample partnership: WEX432123
+      </p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        WEX renewal from web v2 - code
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Letter", "/public/images/wex-renewal-letter-codes.pdf" ) }}
+        <!-- https://docs.google.com/document/d/1KZ1E-x6D4UAXlP7el3bAt2g-V8i2Bk_7Yo-YzsYcJP4/edit -->
+        {{ macros.list( "GOV.UK page", "/renew-waste-exemption" ) }}
+        {{ macros.list( "Renew from web - in service", "/renew-web-2/start" ) }}
+      </ul>
+      <p>
+      DYSEWC<br>
+      </p>
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        WEX renewal from email v2.3
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Renew journey - company", "/registration-v2-3/sample-company" ) }}
+        {{ macros.list( "Renew journey - individual", "/registration-v2-3/sample-individual" ) }}
+        {{ macros.list( "Renew journey - partnership", "/registration-v2-3/sample-partnership" ) }}
+      </ul>
+
+
+      <!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        WEX Renewal test sketches
+      </h2>
+
+      <p><a href="/registration-v2-2-test">Renewal tests following lab research</a></p>
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+
+
+      <h3 class="govuk-heading-s">
+        WEX renewal from email
+      </h3>
+
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Renew journey - company", "/registration-v2-2/sample-company" ) }}
+        {{ macros.list( "Renew journey - individual", "/registration-v2-2/sample-individual" ) }}
+        {{ macros.list( "Renew journey - partnership", "/registration-v2-2/sample-partnership" ) }}
+      </ul>
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        WEX renewal from email v2.1
+      </h2>
+
+
+
+      <h3 class="govuk-heading-s">
+        WEX renewal from GOV.UK
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Renewal from GOV.UK", "/renewals/start" ) }}
+        {{ macros.list( "Renewal from the web Magic link destination", "/renewals/check-details" ) }}
+      </ul>
+
+
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        WEX renewal from email v2.0
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Renew journey - company", "/registration-v2/sample-company" ) }}
+        {{ macros.list( "Renew journey - individual", "/registration-v2/sample-individual" ) }}
+        {{ macros.list( "Renew journey - partnership", "/registration-v2/sample-partnership" ) }}
+      </ul>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        WEX new registrations
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Registration journey (Liam's version, March 2019)", "/registration-liam/start" ) }}
+      </ul>
+
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+
+      <h2 class="govuk-heading-m">
+        Previous research
+      </h2>
+
+      <h3 class="govuk-heading-s">
+        WEX renew from email
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Renewal from email v1", "/renewals/email-renew" ) }}
+        {{ macros.list( "Renewal from email v2", "/renewal-email-v2/email-renew" ) }}
+        {{ macros.list( "Renewal from email v3", "/renewal-email-v3/email-renew" ) }}
+      </ul>
+
+      <h3 class="govuk-heading-s">
+        AD privacy policy
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "WEX AD privacy policy", "/registration-liam/wex-ad-privacy-policy-text" ) }}
+        {{ macros.list( "WCR AD privacy policy", "/registration-liam/wcr-ad-privacy-policy-text" ) }}
+      </ul>
+
+      <h3 class="govuk-heading-s">
+        Backoffice revoke reason
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Backoffice revoke reason", "/back-office/index" ) }}
+      </ul>
+
+      <h3 class="govuk-heading-s">
+        WEX guidance
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "Exemption Guidance summary", "/guidance/start-summary" ) }}
+        {{ macros.list( "Exemption Guidance details", "/guidance/start-details" ) }}
+        {{ macros.list( "Exemption Guidance - treat", "/startpage/guidance-treat" ) }}
+        {{ macros.list( "Older iterations: No guidance", "/guidance/start-no-guidance" ) }}
+        {{ macros.list( "Older iterations: Inline guidance", "/guidance/start-format" ) }}
+        {{ macros.list( "Older iterations: Guidance in Details pattern", "/guidance/start-details" ) }}
+        {{ macros.list( "Older iterations: Simplified formating", "/guidance/start" ) }}
+        {{ macros.list( "Older iterations: Full guidance displayed", "/guidance/start" ) }}
+      </ul>
+
+
+      <h3 class="govuk-heading-s">
+        Other
+      </h3>
+      <ul class="govuk-list govuk-list--bullet">
+      {{ macros.list( "Start page draft v1", "/startpage/startbutton-v1" ) }}
+        {{ macros.list( "Address reuse", "/address-reuse/start" ) }}
+        {{ macros.list( "Edit (back office)", "/edit/index" ) }}
+        {{ macros.list( "Start page accordion", "/startpage/accordion" ) }}
+        {{ macros.list( "Start page button", "/startpage/button" ) }}
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        Testing
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "New tab test", "/newtab/index" ) }}
+      </ul>
+
+      <p>25 July 2019</p>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

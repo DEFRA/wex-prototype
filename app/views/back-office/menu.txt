@@ -1,0 +1,17 @@
+<div class="content">
+<a id="proposition-name" href="index.html">Waste exemptions back office</a>
+<a role="button" href="#" class="js-header-toggle menu" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</a>
+    <nav id="proposition-menu">
+        <ul id="proposition-links" aria-label="Top Level Navigation">
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a href="letter-download.html">Download letters</a>
+            </li>
+            <li>
+                <a href="data-exports.html">Data exports</a>
+            </li>
+        </ul>
+    </nav>
+</div>

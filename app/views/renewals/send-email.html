@@ -1,0 +1,64 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your email to sign in
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your
+      <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<a href="javascript:history.back();" class="govuk-back-link">Back</a>
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="" method="post" class="form">
+        <h1 class="govuk-heading-xl">Look at your email</h1>
+        <p>We have sent an email to <strong>e********e@hotmail.com</strong>.</p>
+
+        <div class="defra-panel">
+          <h2 class="govuk-heading-m defra-panel__heading">Next steps</h2>
+            <ol class="defra-panel__body govuk-list govuk-list--number">
+            <li>Find the email with the subject "You requested access to renew your waste exemptions"</li>
+            <li>Open email and follow the instructions to sign in</li>
+            <li>If you cannot see an email from us, please check your Bulk/Spam folder</li>
+            <li>If you need us to re-send the email, see the "Need help?" area below</li>
+          </ol>
+        </div>
+
+        <h2  class="govuk-heading-m">Need help?</h2>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              I no longer have access to this email address
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Call the Environment Agency helpline on 03708 506506 (Monday to Friday, 8am to 6pm) to update your account.
+          </div>
+        </details>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Send the email again
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            We can <a href="#">resend the email</a> to the address shown above.
+          </div>
+        </details>
+      </form>
+      <a style="color: #efefef;" href="email">(view email text)</a>
+    </div>
+  </div>
+
+{% endblock %}
