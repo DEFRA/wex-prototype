@@ -31,21 +31,34 @@
 
 {% import "includes/macros.html" as macros %}
 
+<p class="govuk-body">
+  <a href="/prototype-admin/clear-data">Clear stored data</a>
+</p>
 
-<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-<!-- ########################################################################### -->
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
 
       <h2 class="govuk-heading-m">
         Current research
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        {{ macros.list( "WCR magic link", "/wcr-magic-link/email-renew" ) }}
+      </ul>
+
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+      <!-- ########################################################################### -->
+      
+      <h2 class="govuk-heading-m">
+        Address re-use
       </h2>
 
       <ul class="govuk-list govuk-list--bullet">
         {{ macros.list( "Address re-use", "/registration-v1/start" ) }}
       </ul>
 
-      <p class="govuk-body">
-        <a href="/prototype-admin/clear-data">Clear stored data</a>
-      </p>
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
       <!-- ########################################################################### -->
